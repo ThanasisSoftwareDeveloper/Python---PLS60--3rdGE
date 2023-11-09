@@ -5,3 +5,6 @@ cB={"city" : "ioannina","population" : 64012,"latitude" : 39.66750000,"longitude
 #dimiourgia antikeimenou kai apothikeusi tou sti metavliti distance
 distance=haversine.getDistanceInKm(cA["latitude"],cA["longitude"],cB["latitude"],cB["longitude"])
 print("Distance between them",cA["city"]," and ", cB["city"],"is ",distance," km")
+
+
+
