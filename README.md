@@ -13,7 +13,7 @@ def getDistanceInKm(lat1,lon1,lat2,lon2):
 
 
 def deg2rad(deg) :
-  return deg * (math.pi/180
+  return deg * (math.pi/180)
 
 2nd Topic/B1
 --------------
