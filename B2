@@ -29,3 +29,7 @@ max_distance=max(list(distance(cA["latitude"],cA["longitude"],gr_cities["latitud
 max_distance_city
 
 print("The city ",gr_cities["city"]," is ",distance," km from the city ",cA=["larisa"])
+
+
+
+
