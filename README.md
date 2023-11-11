@@ -153,3 +153,57 @@ def getDistanceInKm(lat1,lon1,lat2,lon2):
 def deg2rad(deg) :
   return deg * (math.pi/180)
 
+Topic C: Object-oriented programming
+-------------------------------------
+In the following topic you will practice object-oriented programming using
+Python. Given the Pet class (whose code is contained in the Pet.py file ) :
+
+class Pet:
+def __init__(self,name,legs=2) :
+self.name=name
+self.legs=legs
+def getNumberofLegs():
+return self.legs
+def speak():
+return "mmm"
+def __str__(self):
+return self.name+" speaks "+self.speak()+" and has number of legs="+str(self.getNumberofLegs())
+which describes a pet. This class records the following aspects
+of a pet :
+- the name of the pet (name)
+- the number of its legs
+- the sound produced by the pet when it speaks
+The following are requested:
+
+1) Extend the Pet class by creating a new class (Dog) which (1) Create a new class (Dog) that is a class that is about quadrupeds that produce the sound "woof" when they speak.
+2) Extend the Pet class by creating a new class (Bird) which
+concerns animals with 2 legs that produce the sound "tsiou" when they speak
+Save the new Dog and Bird classes within the <your-last-name>_Pet.py file
+(use the Pet.py file you are given which includes the Pet class,
+extend its code and rename it appropriately).
+3) You are additionally given the following Run() method,
+
+from Pet import *
+import datetime
+def Run():
+pets= [Dog('Mat'), Bird('Queen'), .... ] #<-- fill in here
+for p in ....: #<-- fill in here
+print( .... ) #<--fill in here
+print(datetime.datetime.now())
+Run()
+Please fill in the blanks of the Run() method (marked with instants) appropriately so that
+when it is executed, the following messages are displayed on the screen together with the time of execution
+(the datetime changes with each execution of Run):
+
+
+Mat speaks xyz and has number of legs=X
+Queen speaks xyz and has number of legs=Y
+Jack speaks xyz and has number of legs=Z
+Tweetie speaks xyz and has number of legs=M
+2021-12-20 23:18:09.191817
+Where in place of xyz you print what each animal speaks and in X,Y,Z,M the number of legs with based on your calculation.
+Save the code of the modified Run() in the file named <your-last-name>_C.py
+which is given to you after you modify it.
+Record the result printed in total with printscreen of the window's window of your program and place it in the answer box below. Also, in addition,
+paste the python source code you created for the answer below the printscreen.
+
