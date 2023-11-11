@@ -1,0 +1,23 @@
+Class Dog(Pet):
+def __init__(self,name,leg=2): #init method
+Pet.__init__(self,name,legs) # calling init
+self.legs=’4’ #anathesi sti metavliti antikeimenou
+def speak(self):
+Pet.speak(self)
+return “woof” #polimorphism
+
+Class Bird(Pet):
+def __init__(self,name,leg=2): #init method
+Pet.__init__(self,name,legs) # calling init
+def speak(self):
+Pet.speak(self)
+return “tsiou” #polimorphism
+
+from Koufos_Pet import*
+import datetime
+def Run():
+pets=[Dog('Mat'),Bird('Queen'),Dog('Jack'),Bird('Tweetie')]
+for p in pets:
+print(p)
+print(datetime.datetime.now())
+Run()
