@@ -1,34 +1,25 @@
-import haversine 
 import json
-
-cA={"city" : "larisa","population" : 128760,"latitude" : 39.63722220,"longitude" : 22.42027780}
-cB={"city" : "ioannina","population" : 64012,"latitude" : 39.66750000,"longitude" : 20.85083330}   
-
-#dimiourgia antikeimenou kai apothikeusi tou sti metavliti distance
-distance=haversine.getDistanceInKm(cA["latitude"],cA["longitude"],cB["latitude"],cB["longitude"])
-print("Η απόσταση μεταξύ",cA["city"]," και", cB["city"],"είναι ",distance," km")
-
 cities_data="""{"gr_cities" :
-    [     
-        {"city" : "patrai","population" : 163361,"latitude" : 38.24444440,"longitude" : 21.73444440},
-        {"city" : "peristerion","population" : 137660,"latitude" : 38.01666670,"longitude" : 23.70000000},
-        {"city" : "iraklion","population" : 137155,"latitude" : 35.32500000,"longitude" : 25.13055560},
-        {"city" : "nikaia","region" : "35","population" : 94608,"latitude" : 37.96666670,"longitude" : 23.65000000},
-        {"city" : "volos", "population" : 84427,"latitude" : 39.36666670,"longitude" : 22.94583330}  
-    ]
+[
+{"city" : "patrai","population" : 163361,"latitude" : 38.24444440,"longitude" : 21.73444440},
+{"city" : "peristerion","population" : 137660,"latitude" : 38.01666670,"longitude" :
+23.70000000},
+{"city" : "iraklion","population" : 137155,"latitude" : 35.32500000,"longitude" :
+25.13055560},
+{"city" : "nikaia","region" : "35","population" : 94608,"latitude" : 37.96666670,"longitude" :
+23.65000000},
+{"city" : "volos", "population" : 84427,"latitude" : 39.36666670,"longitude" : 22.94583330}
+]
 }"""
-
 with open('cities_json', mode='w') as write_file:
-    json.dump(cities_data,write_file)
-    
+json.dump(cities_data,write_file)
 gr_cities=list('cities_json')
-
-max_distance=max(list(distance(cA["latitude"],cA["longitude"],gr_cities["latitude"],gr_cities["longitude"])))
-
-
+max_distance=max(list(distance(cA["latitude"],cA["longitude"],gr_cities["latitude"],gr_cities["l
+ongitude"])))
 max_distance_city
+print("Η πόλη ",gr_cities["city"]," απέχει ",distance," km από την πόλη ",cA=["larisa"])
 
-print("The city ",gr_cities["city"]," is ",distance," km from the city ",cA=["larisa"])
+
 
 
 
